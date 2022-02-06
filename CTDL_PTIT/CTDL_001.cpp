@@ -46,4 +46,5 @@ int main()
         in();
         sinh();
     }
+    return 0;
 }
