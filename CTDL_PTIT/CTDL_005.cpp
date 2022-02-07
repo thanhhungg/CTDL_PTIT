@@ -72,4 +72,5 @@ int main()
     init(head,n,k);
     deleteNode(head,k);
     show(head);
+    return 0;
 }
