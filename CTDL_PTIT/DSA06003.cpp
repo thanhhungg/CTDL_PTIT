@@ -9,7 +9,7 @@ int main()
     cin >> t;
     while (t--)
     {
-        int n, a[100], cnt = 0;
+        int n, a[1000], cnt = 0;
         cin >> n;
         for (int i = 0; i < n; i++)
         {
