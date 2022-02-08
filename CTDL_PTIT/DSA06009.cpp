@@ -1,6 +1,5 @@
 #include <bits/stdc++.h>
 #define endl "\n"
-#define ll long long
 using namespace std;
 int main()
 {
@@ -10,21 +9,22 @@ int main()
     cin >> t;
     while (t--)
     {
-        int n;
-        cin>>n;
-        set<int> s;
+        int n,k;
+        cin>>n>>k;
+        int cnt=0,a[n];
         for(int i = 0; i < n; i++)
         {
-            int x;
-            cin>>x;
-            while(x!=0)
+           cin>>a[i];
+        }
+        for(int i = 0; i < n-1; i++)
+        {
+            int key=k-a[i];
+            for(int j=i+1;j<n;j++)
             {
-                s.insert(x%10);
-                x/=10;
+                if(key==a[j]) cnt++;
             }
         }
-        for(int x:s) cout<<x<<" ";
-        cout<<endl;
+        cout<<cnt<<endl;
     }
     return 0;
 }
