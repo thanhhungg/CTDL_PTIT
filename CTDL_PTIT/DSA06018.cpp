@@ -20,7 +20,7 @@ int main()
           s.insert(x);
        }
        int cnt=*--s.end()-*s.begin()+1-s.size();
-       cout<<cnt<<endl;
+       cout<<cnt<<endl; 
     }
     return 0;
 }
