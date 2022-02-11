@@ -4,7 +4,7 @@ using namespace std;
 int n,a[100],check[100]={0};
 void in()
 {
-    for(int i=1;i<=n;i++)
+    for(int i=n;i>=1;i--)
     {
         cout<<a[i];
     }
@@ -12,14 +12,14 @@ void in()
 }
 void sinh(int x)
 {
-    for(int i = 1; i <= n; i++)
+    for(int i = n; i >=1; i--)
     {
         if(check[i]==0)
         {
             a[x]=i;
             check[i]=1;
-            if(x==n) in();
-            else sinh(i+1);
+            if(x==1) in();
+            else sinh(x-1);
             check[i]=0;
         }
     }
@@ -33,7 +33,7 @@ int main()
 	while (t--)
 	{
         cin>>n;
-        sinh(1);
+        sinh(n);
         cout<<endl;
 	}
 }
