@@ -14,16 +14,15 @@ int main()
     }
     for(int i = 0; i < n - 1; i++)
     {
-        int min=a[i],index;
+        int min=i;
         for(int j=i+1;j<n;j++)
         {
-            if(a[j]<min)
+            if(a[j]<a[min])
             {
-                min=a[j];
-                index=j;
+                min=j;
             }
         }
-        swap(a[i],a[index]);
+        swap(a[i],a[min]);
         cout<<"Buoc "<<i+1<<": ";
         for(int i=0;i<n;i++)
         {
