@@ -11,11 +11,11 @@ int main()
     {
         int n;
         cin >> n;
-        int a[n];
+        int a[1000];
         for (int i = 1; i <= n; i++)
             cin >> a[i];
         int i = n - 1;
-        while (a[i] > a[i + 1] && i > 0)
+        while (i>0&&a[i] > a[i + 1])
         {
             i--;
         }
@@ -29,7 +29,7 @@ int main()
         else
         {
             int x = n;
-            while (a[i] > a[x] && x > 0)
+            while (a[i] > a[x])
             {
                 x--;
             }
