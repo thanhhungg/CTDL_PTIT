@@ -12,21 +12,21 @@ int main()
         int n,k;
         cin>>n>>k;
         int a[n+5];
+        multiset<int> ms;
         for(int i= 1; i <= n; i++)
         {
             cin>>a[i];
         }
-        for(int i= 1; i <=n-k+1;i++)
+        for(int i= 1; i<=k;i++)
         {
-            int j=i;
-            set<int>s;
-            while(j<k+i)
-            {
-                s.insert(a[j]);
-                j++;
-            }
-            cout<<*--s.end()<<" ";
+            ms.insert(a[i]);
         }
-        cout<<endl;
+        for(int i=k+1;i<=n;i++)
+        {
+            cout<<*ms.rbegin()<< " ";
+            ms.erase(ms.find(a[i-k]));
+            ms.insert(a[i]);
+        }
+        cout<<*ms.rbegin()<<endl;
     }
 }
