@@ -19,11 +19,11 @@ int main()
         }
         sort(b,b+n);
         int l=0,r=n-1;
-        while(a[l]==b[l]&&l<n)
+        while(a[l]==b[l]&&l<n-1)
         {
             l++;
         }
-        while(a[r]==b[r]&&r>=0)
+        while(a[r]==b[r]&&r>0)
         {
             r--;
         }
